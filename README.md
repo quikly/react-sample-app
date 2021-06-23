@@ -1,3 +1,28 @@
+# Project Overview
+
+Give an overview of the project here. 
+
+In order to access the Github Graphql API, you'll need to first create a personal access token. Detailed instructions on how to do that can be found [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). To match the behavior of the GraphQL Explorer, request the following scopes:
+
+    user
+    public_repo
+    repo
+    repo_deployment
+    repo:status
+    read:repo_hook
+    read:org
+    read:public_key
+    read:gpg_key
+
+Once you have your personal access token, rename the `.env.example` file to `.env` and paste in your personal access token as the value of `REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN`.
+
+Once you have added your personal access token you should be all set to start querying the Github API!
+
+Feel free to use any of the following libraries, or others not listed here:
+
+[Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
