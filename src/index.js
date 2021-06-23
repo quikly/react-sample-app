@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/* Uncomment either the github client or the shopify client to get started */
+
+// import { githubClient as client } from './apolloClient';
+// import { shopifyClient as client } from './apolloClient';
+import { ApolloProvider } from '@apollo/client';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={{}}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
