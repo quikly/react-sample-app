@@ -4,9 +4,10 @@ The Quikly platform uses GraphQL and React to load and display information as pa
 
 You may choose to work on one of the following two scenarios:
 
-- Option 1. Use the Github API to search and display an organization. [Example](https://projects.invisionapp.com/share/8C1198G2H29T#/screens/454313416)
+- Option 1. Use the Shopify API to search for a product and display the results. [Example](https://projects.invisionapp.com/share/8C1198G2H29T#/screens/454313418)
 
-- Option 2. Use the Shopify API to search for a product and display the results. [Example](https://projects.invisionapp.com/share/8C1198G2H29T#/screens/454313418)
+- Option 2. Use the Github API to search and display an organization. [Example](https://projects.invisionapp.com/share/8C1198G2H29T#/screens/454313416)
+
 
 # Getting Started
 To get started, you'll probably want to clone this repository and then run `yarn install` to load in the dependencies. Then run `yarn start` to run the app in development mode. (See below for more useful commands.)
@@ -15,12 +16,18 @@ GraphQL is new to a lot of developers, so you may want to check out [Shopify's s
 
 For this exercise, you'll want to read up on [Apollo hooks](https://www.apollographql.com/docs/react/api/react/hooks/) to learn about ways to perform queries in your component. For specific API details, check out the sections below.
 
+
 ## Shopify GraphQL API
 [Shopify GraphQL API](https://shopify.dev/concepts/graphql)
 
 If you choose to use the Shopify API, you can use Quikly's API token provided to you. Rename the `.env.example` file to `.env` and paste in the token as the value of `REACT_APP_SHOPIFY_ACCESS_TOKEN`.
 
-Once you've added the token, you should be all set to start querying the Shopify API. Edit the `index.js` file to pull in the appropriate apollo client. Then, check out the API reference and write a query to search for products using the search term provided in your form. Hint: the [Explorer](https://shopify.dev/tools/graphiql-storefront-api) is a great way to dive deeper into the Storefront API to help you write your query.
+Once you've added the token, you should be all set to start querying the Shopify API. Edit the `index.js` file to pull in the appropriate apollo client. Then, check out the API reference and write a query to search for products using the search term provided in your form. 
+
+You'll want to use the [Shopify Storefront API](https://shopify.dev/docs/storefront-api/). 
+Hint: the [Explorer](https://shopify.dev/tools/graphiql-storefront-api) is a great way to dive deeper into the Storefront API to help you write your query. Click the "Docs" tab on the right of the explorer to read more. Take a look at [QueryRoot](https://shopify.dev/docs/admin-api/graphql/reference/common-objects/queryroot#products-2021-04) to find some specific documentation on searching for products. 
+
+
 ## Github GraphQL API
 [GitHub GraphQL API](https://docs.github.com/en/graphql)
 
@@ -38,7 +45,7 @@ If you choose to use the Github API, you'll need to create a personal access tok
 
 Once you have your personal access token, rename the `.env.example` file to `.env` and paste in your personal access token as the value of `REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN`. As a rule we never want to commit API keys into git!
 
-Once you have added your personal access token you should be all set to start querying the Github API. Edit the `index.js` file to pull in the appropriate apollo client. Then, check out the API reference and run a query to fetch data about an "Organization" using the search term provided in your form as the organizations 'login` value. Hint: the [Explorer](https://docs.github.com/en/graphql/overview/explorer) is a great way to dive deeper into their API and how to set up your query.
+Once you have added your personal access token you should be all set to start querying the Github API. Edit the `index.js` file to pull in the appropriate apollo client. Then, check out the API reference and run a query to fetch data about an "Organization" using the search term provided in your form as the organizations 'login` value. Hint: the [Explorer](https://docs.github.com/en/graphql/overview/explorer) is a great way to dive deeper into their API and how to set up your query. Click the "Docs" tab on the right of the explorer to read more.
 
 ## Design
 It’s up to you if you want to match the look and feel of the prototype, or put your own twist on it. As a front-end developer, it will be your job to take a design and bring it to life, so we’d like to get a sense of how you like to write your CSS and how your components work, but we won’t be judging the visual design. Feel free to use your own CSS or the following UI libraries, or others not listed here:
